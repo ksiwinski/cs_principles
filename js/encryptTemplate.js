@@ -57,25 +57,25 @@ function decryptWord(word)
     for (i = 0, k = word.length; i < k; i++)
     {
         let ASCIIWord1 = word.charCodeAt(i);  
+        console.log(getDecryptValue());
         if(ASCIIWord1 >= 32 && ASCIIWord1 <= 64) 
         {
-            let m = ASCIIWord1
+            let m = ASCIIWord1;
             let output_word = String.fromCharCode(m);
             DECRYTPEDWORD.push(output_word);
             console.log(output_word);
         }
         console.log(getDecryptValue());
         console.log(ASCIIWord1);
-        if (ASCIIWord1>= 43 - getDecryptValue() && ASCIIWord1<=100 - getDecryptValue())
+        if (ASCIIWord1>= 75 - getDecryptValue() && ASCIIWord1<=100 - getDecryptValue())
         {
-            if (ASCIIWord1>= 75 - getDecryptValue() && ASCIIWord1<=100 - getDecryptValue())
-            {
-                let m = ASCIIWord1 - 10  + getDecryptValue() ;
-                let output_word = String.fromCharCode(m);
-                DECRYTPEDWORD.push(output_word);
-                console.log(ASCIIWord1);
-            }
+
+            let m = ASCIIWord1 + 22  + getDecryptValue() ;
+            let output_word = String.fromCharCode(m);
+            DECRYTPEDWORD.push(output_word);
+            console.log(ASCIIWord1);
         }
+        
 }
 }
 
